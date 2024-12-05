@@ -1,0 +1,211 @@
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>Здоровье и Фитнес</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<style>
+		section{
+			border-radius: 8px;
+			height:750px;
+		}
+		canvas {
+            display: block;
+        }
+	</style>
+</head>
+<body>
+       <canvas id="healthCanvas"></canvas>
+	   <div id="controls">
+        <button onclick="addRecommendation()">Добавить рекомендацию</button>
+        <button onclick="changeTextColor()">Изменить цвет текста</button>
+        <button onclick="showWindowSize()">Показать размер окна</button>
+    </div>
+    <div id="con1">
+        <section id="nutrition"  style="background:cyan">
+            <h2>Рекомендации по здоровому питанию</h2>
+            <p>Здоровое питание — ключ к хорошему самочувствию. Вот несколько рекомендаций:</p>
+            <ul id="recommendationList" class="list">
+                <li><strong>Баланс макро- и микроэлементов:</strong> Включайте в рацион разнообразные продукты, чтобы получать все необходимые витамины и минералы.</li>
+                <li><strong>Фрукты и овощи:</strong> Ешьте не менее пяти порций фруктов и овощей в день для улучшения обмена веществ и укрепления иммунной системы.</li>
+                <li><strong>Гидратация:</strong> Пейте достаточно воды в течение дня для поддержания гидратации организма.</li>
+            </ul>
+            <h3>Популярные рецепты:</h3>
+            <ul>
+                <li><a href="https://www.iamcook.ru/showrecipe/13911" target="_blanck">Салат с киноа и овощами</a></li>
+                <li><a href="https://www.russianfood.com/recipes/recipe.php?rid=151152" target="_blanck">Гречка с курицей и зеленью</a></li>
+                <li><a href="https://1000.menu/cooking/23700-smuzi-klubnika-banan" target="_blanck">Смузи из ягод и банана</a></li>
+            </ul>
+				<img src="image/1.jpg" width="450px" height="300px" class="d">
+				<img src="image/2.jpg" width="450px" class="d">
+				<img src="image/3.jpg" width="450px" height="300px">
+        </section>
+
+        <section id="fitness">
+            <h2>Планы тренировок и советы по фитнесу</h2>
+            <p>Регулярные тренировки помогают поддерживать физическую форму и укреплять здоровье. Вот несколько советов:</p>
+            <ul>
+                <li><strong>Планирование тренировок:</strong> Создайте график тренировок, включая кардио, силовые упражнения и растяжку.</li>
+                <li><strong>Цели и мотивация:</strong> Установите конкретные цели и отслеживайте свой прогресс для поддержания мотивации.</li>
+                <li><strong>Разнообразие:</strong> Меняйте типы тренировок, чтобы избежать скуки и тренировать разные группы мышц.</li>
+            </ul>
+            <h3>Программы тренировок:</h3>
+            <ul>
+                <li><a href="https://spiritfit.ru/blog/trenirovki/trainig-plan-for-begginers/" target="_blanck">План тренировок для начинающих</a></li>
+                <li><a href="https://www.sportmaster.ru/media/articles/programma-trenirovok-po-naboru-massi-u-muzchin/?utm_referrer=https://yandex.kz/" target="_blanck">Программа для увеличения мышечной массы</a></li>
+                <li><a href="https://style.rbc.ru/health/60213ee69a79470c2b0b1964" target="_blanck">Тренировки для улучшения выносливости</a></li>
+            </ul>
+				<img src="image/4.jpg" width="450px" class="d">
+				<img src="image/5.jpg" width="450px" class="d">
+				<img src="image/6.jpg" width="450px" height="300px">
+        </section>
+
+        <section id="med-info">
+            <h2>Медицинская информация и самопомощь</h2>
+            <p>Заботьтесь о своём здоровье и получайте необходимую информацию для поддержания хорошего самочувствия:</p>
+            <ul>
+                <li><strong>Профилактика заболеваний:</strong> Регулярные медицинские осмотры и прививки помогают предотвратить многие болезни.</li>
+                <li><strong>Самопомощь при распространённых недомоганиях:</strong> Узнайте, как правильно обращаться с такими симптомами, как головная боль или простуда.</li>
+                <li><strong>Психологическое здоровье:</strong> Не забывайте про психическое здоровье. Управление стрессом и поддержка психологического благополучия также важны.</li>
+            </ul>
+            <h3>Полезные статьи:</h3>
+            <ul>
+                <li><a href="https://04.rospotrebnadzor.ru/index.php/epid-otdel/org/7053-12012017.html" target="_blanck">Как предотвратить грипп и простуду</a></li>
+                <li><a href="https://mag.103.by/medicinskie-stati/99553-pervaja-pomoshhy-pri-travmah/" target="_blanck">Основы первой помощи при травмах</a></li>
+                <li><a href="https://gorzdrav.org/blog/kak-borotsja-so-stressom/" target="_blanck">Методы борьбы со стрессом</a></li>
+            </ul>
+				<img src="image/7.jpg" width="450px" class="d">
+				<img src="image/8.jpg" width="450px" class="d">
+				<img src="image/9.webp" width="450px" height="300px">
+        </section>
+		<section id="table">
+			<h2 align="center"><b> Факторы здоровья </b></h2>
+			<button onclick="sortTable()">Сортировать по сфере влияния</button>
+			<table id="healthTable" border="5">
+				<tr>
+					<th>Сфера влияния факторов</th>
+					<th>Процент влияния</th>
+					<th>Факторы, укрепляющие здоровье</th>
+					<th>Факторы, ухудшающиe здоровье</th>
+				</tr>
+				<tr>
+					<td>Генетические</td>
+					<td>15-20%</td>
+					<td>Здоровая наследственность.Отсутствие предрасположенности к заболеваниям.</td>
+					<td>Наследственные заболевания нарушения ипредрасположенность к ним.</td>
+				</tr>
+				<tr>
+					<td>Состояние окружающей среды</td>
+					<td>20-25%</td>
+					<td>Хорошие бытовые и производственные условия,экологически благоприятная среда обитания.</td>
+					<td>Вредные условия быта и производства, нарушение 	экологической обстановки</td>
+				</tr>
+				<tr>
+					<td>Уровень развития медицины и здравоохранения</td>
+					<td>10-15%</td>
+					<td>Медицинский скрининг,высокий уровень профилактических мероприятий,своевременная и полноценная медицинская помощь.</td>
+					<td>Отсутствие постоянного контроля за динамикой здоровья; низкий уровень первичной профилактики;некачественное медицинское обслуживание.</td>
+				</tr>
+				<tr>
+					<td>Условия и образ жизни</td>
+					<td>50-55%</td>
+					<td>Рациональная организация жизнедеятельности</td>
+					<td>Отсутствие рационального режима жизнедеятельности</td>
+				</tr>
+			</table>
+			<a href="2.html" target="_blank">Перейти на сайт Фитнес и BMI Калькулятор</a>
+			</section>
+		</div>
+		<script>
+        const canvas = document.getElementById('healthCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = 500;
+
+        let angle = 0;
+        let textOpacity = 0;
+        let opacityDirection = 0.01;
+
+        function drawPlusInCircle() {
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            
+            // рисуем круг
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 100, 0, Math.PI * 2);
+            ctx.fillStyle = "#32CD32";
+            ctx.fill();
+
+            // сохраняем текущее состояние перед вращением
+            ctx.save();
+            ctx.translate(centerX, centerY);
+            ctx.rotate(angle);
+
+            // рисуем плюс
+            ctx.fillStyle = "white";
+            ctx.fillRect(-10, -50, 20, 100);
+            ctx.fillRect(-50, -10, 100, 20);
+            ctx.restore();
+        }
+
+        function drawText() {
+            ctx.font = "bold 48px Arial";
+            ctx.fillStyle = `rgba(0, 128, 0, ${textOpacity})`;
+            ctx.textAlign = "center";
+            ctx.fillText("Здоровье и Фитнес", canvas.width / 2, canvas.height / 2 + 200);
+            textOpacity += opacityDirection;
+            if (textOpacity >= 1 || textOpacity <= 0) {
+                opacityDirection = -opacityDirection;
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            drawPlusInCircle();  // рисуем вращающийся плюс в круге
+            drawText();          // рисуем и анимируем текст
+            angle += 0.01; // меньше число = медленнее вращение
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        function sortTable() {
+            const table = document.getElementById("healthTable");
+            const rows = Array.from(table.rows).slice(1);
+
+            rows.sort((a, b) => {
+                const percentA = parseInt(a.cells[1].textContent.split('-')[0]);
+                const percentB = parseInt(b.cells[1].textContent.split('-')[0]);
+                return percentA - percentB;
+            });
+            rows.forEach(row => table.appendChild(row));
+        }
+		function addRecommendation() {
+            const list = document.getElementById("recommendationList");
+            const recommendationText = "Добавьте больше цельных злаков в свой рацион!";
+            const recommendationExists = Array.from(list.getElementsByTagName("li")).some(li => li.textContent === recommendationText);
+            
+            if (recommendationExists) {
+                alert("Рекомендация уже добавлена.");
+            } else {
+                const newListItem = document.createElement("li");
+                newListItem.textContent = recommendationText;
+                list.appendChild(newListItem);
+            }
+        }
+        function changeTextColor() {
+            document.querySelectorAll("h1, h2, p").forEach(element => {
+                element.style.color = element.style.color === "darkred" ? "#2c3e50" : "darkred";
+            });
+        }
+        function showWindowSize() {
+            alert(`Размер окна: ${window.innerWidth}x${window.innerHeight}`);
+        }	
+    </script>
+</body>
+</html>
